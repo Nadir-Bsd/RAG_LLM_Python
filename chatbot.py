@@ -121,6 +121,7 @@ def get_user_input(state) -> dict:
     user_input = input("Enter a prompt: ")
     return {"user_input": user_input}
 
+# check if user needs RAG
 def need_rag(state: State) -> bool:
     # get user input
     user_input = state["user_input"]
@@ -146,7 +147,6 @@ def make_context(state: State) -> dict:
     return {"context": "\n".join([doc.page_content for doc in state["datas"]])}
 
 # generate response
-# refacto il y aura pas tout le temps un context
 def generate_response(state: State) -> dict:
 
     resume = state.get("summary", "")

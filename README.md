@@ -31,6 +31,8 @@ pip install -r requirements.txt
 
 - attendre que le script fasse la DB (ça peux être long)
 
+## commands
+
 linux:
    ```bash
    python3 indexationPhase.py
@@ -54,6 +56,12 @@ windows:
    python chatbot.py
    ```
 
+for the RAG:
+   ```bash
+   -use rag: "the question"
+   ```
+(utilisez-le lorsque vous parlez déjà avec le chatbot)
+
 to stop:
    ```bash
    "exit"
@@ -65,3 +73,12 @@ to stop:
 - `chroma/` : Base de données vectorielle.
 - `indexationPhase.py` : Script de création de la base de données.
 - `chatbot.py` : Script d'interrogation du chatbot.
+
+## Attention !!!
+
+une erreurs possible est que la fenetre contextuelle soit dépassée (trop de tokens):
+```bash
+   raise httpx.HTTPStatusError(
+      httpx.HTTPStatusError: Error response 429 while fetching https://api.mistral.ai/v1/chat/completions: {"message":"Requests rate limit exceeded"}
+   )
+```
