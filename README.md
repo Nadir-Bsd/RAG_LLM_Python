@@ -25,7 +25,7 @@ pip install -r requirements.txt
 2. Configurez vos clés API dans le fichier `.env`.
 
 ## Utilisation
-1. Placez vos documents dans le dossier `data/`. Le programme n'accepte que les fichiers .JPG.
+1. Placez vos documents dans le dossier `data/`. Le programme n'accepte que les fichiers .PDF.
 
 2. Exécutez le script de création de la base de données :
 
